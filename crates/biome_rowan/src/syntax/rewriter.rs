@@ -158,7 +158,7 @@ pub enum VisitNodeSignal<L: Language> {
     Traverse(SyntaxNode<L>),
 }
 
-fn traverse<R>(mut parent: SyntaxNode<R::Language>, rewriter: &mut R) -> SyntaxNode<R::Language>
+pub fn traverse<R>(mut parent: SyntaxNode<R::Language>, rewriter: &mut R) -> SyntaxNode<R::Language>
 where
     R: SyntaxRewriter,
 {
